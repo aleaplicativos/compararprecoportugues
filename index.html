@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Preços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparar Preços</h1>
+        <div class="produto" id="produto1">
+            <h2>Produto 1</h2>
+            <label for="quantidade1">Quantidade:</label>
+            <input type="number" id="quantidade1" required>
+            <select id="unidade1" onchange="atualizarUnidades('unidade1')">
+                <option value="">Escolha o tipo de medida...</option>
+                <option value="unidade">unidade</option>
+                <option value="ml">ml</option>
+                <option value="litros">litros</option>
+                <option value="gramas">gramas</option>
+                <option value="quilos">quilos</option>
+                <option value="centimetros">centímetros</option>
+                <option value="metros">metros</option>
+            </select>
+            <label for="preco1">Preço:$</label>
+            <input type="number" id="preco1" required>
+            <p id="custo1"></p>
+        </div>
+        
+        <div class="produto" id="produto2">
+            <h2>Produto 2</h2>
+            <label for="quantidade2">Quantidade:</label>
+            <input type="number" id="quantidade2" required>
+            <select id="unidade2" onchange="atualizarUnidades('unidade2')">
+                <option value="">Escolha o tipo de medida...</option>
+                <option value="unidade">unidade</option>
+                <option value="ml">ml</option>
+                <option value="litros">litros</option>
+                <option value="gramas">gramas</option>
+                <option value="quilos">quilos</option>
+                <option value="centimetros">centímetros</option>
+                <option value="metros">metros</option>
+            </select>
+            <label for="preco2">Preço:$</label>
+            <input type="number" id="preco2" required>
+            <p id="custo2"></p>
+        </div>
+        
+        <button onclick="compararPrecos()">Calcular</button>
+        <button onclick="limparCampos()">Limpar</button>
+        <p id="mensagem"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
