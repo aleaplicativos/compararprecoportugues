@@ -4,8 +4,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Garantir que o corpo ocupe a altura total da tela */
   margin: 0;
+  padding-top: 20px; /* Adicionar espaçamento superior */
 }
 
 .container {
@@ -13,12 +14,15 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 90%; /* Ajustar largura para dispositivos móveis */
+  max-width: 400px; /* Limitar a largura máxima */
+  box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
   color: #333;
+  margin-bottom: 20px; /* Adicionar margem inferior */
 }
 
 .produto {
@@ -36,6 +40,7 @@ input, select, button {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 button {
